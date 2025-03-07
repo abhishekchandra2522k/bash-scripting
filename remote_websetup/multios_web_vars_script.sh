@@ -1,13 +1,10 @@
 #!/bin/bash
 
-# run command ./web_args_script.sh "https://www.tooplate.com/zip-templates/2098_health.zip" "2098_health"
-# $0 $1 $2 are the first, second, third, and so on arguments till $9 which is 10th.
-
 #Variables Declaration
 PACKAGE="httpd wget unzip"
 SVC="httpd"
-# URL="https://www.tooplate.com/zip-templates/2098_health.zip"
-# ARTIFACT_NAME="2098_health"
+URL="https://www.tooplate.com/zip-templates/2098_health.zip"
+ARTIFACT_NAME="2098_health"
 TEMPDIR="/tmp/webfiles"
 NULL="/dev/null"
 
@@ -34,9 +31,9 @@ mkdir -p $TEMPDIR
 cd $TEMPDIR
 echo
 
-wget $1 > $NULL
-unzip $2.zip > $NULL
-sudo cp -r $2/* /var/www/html
+wget $URL > $NULL
+unzip $ARTIFACT_NAME.zip > $NULL
+sudo cp -r $ARTIFACT_NAME/* /var/www/html
 echo
 
 # Bounce Service

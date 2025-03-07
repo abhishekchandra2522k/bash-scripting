@@ -22,7 +22,7 @@ fi
 echo "#########################################################"
 echo
 
-# crontab -e 
-# edit the file and provide the following input to run the above script every minute and store the logs
+# $ crontab -e 
+# edit the file opened using the above command and provide the following input to run the above script every minute and store the logs
 # * * * * * /opt/scripts/monitoring.sh &>> /var/log/monitoring_httpd.log
 # save and exit will install a new cron job in the system which will run every minute

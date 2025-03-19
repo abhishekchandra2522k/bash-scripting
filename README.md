@@ -14,6 +14,11 @@ _See Vagranfile for more information on the below VM configurations_
 
 ### General Notes:
 
+- Make sure to make the script executable (`chmod +x <file-name>.sh`) to be able to execute the script from the shell.
+- `./<filname>.sh` to execute the script.
+- `nohup <command>` to execute the command in the background.
+- `<command> > /dev/null` to generate no output.
+
 #### Generating SSH Keys
 
 - `ssh-keygen`: It will generate two keys -- One is the Public Key (stored at /root/.ssh/id_rsa.pub) and other is the Private Key (stored at /root/.ssh/id_rsa). Public Key acts as a lock and Private Key as the key to establish the connection.

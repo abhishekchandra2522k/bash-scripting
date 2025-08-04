@@ -18,6 +18,8 @@ _See Vagranfile for more information on the below VM configurations_
 - `./<filname>.sh` to execute the script.
 - `nohup <command>` to execute the command in the background.
 - `<command> > /dev/null` to generate no output.
+- Once we connect to a VM using SSH for the first time, it asks for permission to store a fingerprint - SHA256:`<fingerprint>`, that file is `~/.ssh/known_hosts`.
+- To remove all the known hosts (means it will ask for the permission to store the fingerprint once you try to SSH into the machine again) use - `cat /dev/null > ~/.ssh/known_hosts`
 
 #### Generating SSH Keys
 
